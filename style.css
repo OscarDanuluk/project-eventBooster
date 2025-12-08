@@ -1,58 +1,187 @@
-      body{
-        background: black;
+      * {
+          margin: 0;
+          padding: 0;
       }
-      header{
-        background: url(/images/pic.png) no-repeat center/cover;
-        padding: 40px 0 133px 0;
+
+      .overlay {
+        background: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+      }
+
+      .modal {
+        background: white;
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 65px 30px 60px 30px;
+        border-radius: 200px 0px;
       }
 
-.logo {
-position: absolute;
-left: 0;
-top: 0;
-}
-.header_title {
-color: #DC56C5;
-font-size: 50px;
-text-align: center;
+      .modal-close {
+        position: absolute;
+        right: 20px;
+        top: 4px;
+        font-size: 40px;
+        cursor: pointer;
+      }
 
-}
-.header_find {
-    backdrop-filter: blur(20px);
-background: rgba(255, 255, 255, 0.2);
-border-radius: 20px;
-width: 270px;
-height: 40px;
-border: none;
-color: whitesmoke;
-padding-left: 30px;
-}
-.header_find::placeholder{
-    color: #939393
-}
+      .modal-logo {
+        width: 132px;
+        height: 132px;
+        margin-bottom: 41px;
+      }
 
-.main {
-    display: flex;
-    align-items: center;
-}
-.main-card {
+      .modal-box {
+        display: flex;
+      }
 
-}
-.main-card-cards {
-}
-.main-card-cards__image {
-}
-.main-card-cards__name {
-    color: #DC56C5;
-    
-}
-.main-card-cards__date {
-    color: white;
-}
-.main-card-cards__place {
-    color: white;
-    font-weight: 800;
-}
+      .modal-box-poster {
+        width: 360px;
+        height: 640px;
+      }
+
+      .modal-box-data {
+        max-width: 450px;
+        margin-left: 60px;
+      }
+
+      .modal-box-data-title {}
+
+      .modal-box-data-desc {}
+
+      .modal-box-data-buy {}
+
+      .modal-box-more {}
+
+      body {
+          background: black;
+      }
+
+      header {
+          background: url(/images/header-bg.png) no-repeat center/cover;
+          padding: 40px 0 133px 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+
+      .logo {
+          position: absolute;
+          left: 0;
+          top: 0;
+      }
+
+      .header_title {
+          color: #DC56C5;
+          font-size: 50px;
+          margin-bottom: 52px;
+          text-align: center;
+
+      }
+
+      .header_find {
+          backdrop-filter: blur(20px);
+          background: rgba(255, 255, 255, 0.2);
+          border-radius: 20px;
+          width: 270px;
+          height: 40px;
+          border: none;
+          color: whitesmoke;
+          padding-left: 30px;
+      }
+
+      input:focus-visible {
+          outline: none;
+          border: none;
+      }
+
+      .header_find::placeholder {
+          color: #939393
+      }
+
+      .main {
+          padding: 20px 140px;
+          display: flex;
+          align-items: center;
+      }
+
+      .main-card {
+          cursor: pointer;
+          transition: all .4s;
+          position: relative;
+      }
+
+      .main-card::before {
+          position: absolute;
+          content: '';
+          border: 1px solid rgba(220, 86, 197, 0.3);
+          border-radius: 50px 0;
+          width: 153px;
+          height: 143px;
+          left: 35px;
+          bottom: 150px;
+
+      }
+
+      .main-card:hover {
+          scale: 1.03;
+      }
+
+      .main-card-cards {}
+
+      .main-card-cards__image {}
+
+      .main-card-cards__name {
+          text-align: center;
+          color: #DC56C5;
+
+      }
+
+      .main-card-cards__date {
+          text-align: center;
+          color: white;
+      }
+
+      .main-card-cards__place {
+          text-align: center;
+          color: white;
+          font-weight: 800;
+      }
+
+      .footer {
+          margin-top: 80px;
+          margin-bottom: 80px;
+      }
+
+      .pagination {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+
+      .pagination-page {
+          background: none;
+          border: none;
+          color: white;
+          padding: 5px 12px;
+          border: 1px solid transparent;
+          border-radius: 10px 0;
+          width: 32px;
+          height: 30px;
+          cursor: pointer;
+          transition: all .4s;
+      }
+
+      .active-page {
+          border: 1px solid #dc56c5;
+          color: #dc56c5;
+      }
