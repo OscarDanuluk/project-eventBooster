@@ -10,12 +10,14 @@
           right: 0;
           bottom: 0;
           top: 0;
-          display: flex;
+          display: none;
           justify-content: center;
           align-items: center;
           z-index: 2;
       }
-
+      .show-modal{
+        display: flex;
+      }
       .modal {
         background: #FFF2FD;
         position: relative;
